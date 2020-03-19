@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登录</title>
+<script src="jquery-3.1.1/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Other.css">
+<script type="text/javascript" src="js/log.js"></script>
+</head>
+
+<body>
+
+<div id="log_top">
+     <img src="pic/logo.jpg" width="235" height="75" />
+<div class="log_zi1">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号绑定验证！</div>
+</div>
+<div id="log_bg">
+     <div id="log_in">
+          <div class="log_fs">
+               <div id="log_sw">扫码登录</div>
+               <div class="log_fg"></div>
+               <div id="log_ac">账号登录</div>
+          </div>
+          <div id="log_main1">
+              <div id="log_ewm"></div>
+              <div class="log_zi2">打开<a class="log_zi3" href="#">随心购app<a>扫码登陆</div>
+              <div class="log_zi2"><a class="log_zi4" href="Registered.html">现在注册，赢好礼></a></div>
+          </div>
+          <div id="log_main2">
+              <input id="log_tl1" type="text" name="user_name" placeholder="用户名/手机/邮箱"/>
+              <input id="log_tl2" type="password" name="user_password" placeholder="密码"/>
+              <div class="log_vf"><a class="log_zi5" href="#">短信验证登录</a></div>
+              <div class="log_vf"><a class="log_zi5" href="#">忘记密码?</a></div>
+              <button id="log_btn" type="button" class="log_btn" onclick="log()">登录</button>
+          </div>
+     </div>
+</div>
+
+
+</body>
+
+<script>   
+	$(function(){
+		$('#log_ac').click(function(){
+			$('#log_main2').css("display","block");
+			$('#log_main1').css("display","none");
+			$('#log_ac').css("border-bottom-color","#F33");
+			$('#log_sw').css("border-bottom-color","gainsboro");
+			});
+		$('#log_sw').click(function(){
+			$('#log_main2').css("display","none");
+			$('#log_main1').css("display","block");
+			$('#log_sw').css("border-bottom-color","#F33");
+			$('#log_ac').css("border-bottom-color","gainsboro");
+			});
+		// $('#log_btn').click(function(){
+		// 	if($('#log_tl1').val() == ''){
+		// 		alert("用户名不能为空！");
+		// 	}
+		// 	if($('#log_tl1').val() == '' ||$('#log_tl2').val().length < 6){
+		// 		alert("密码不能小于6位");
+		// 	}	
+		// });
+		// $user = $('#log_tl1').val();
+		// $password = form.password.value;
+		// $url = "chkname.txt";
+		// xmlhttp.open("GET",url,true);
+	})
+	function log(){
+		localStorage.setItem('islogin', 'test');
+		
+		var tl1=document.getElementById("log_tl1");
+		var tl2=document.getElementById("log_tl2");
+		if(tl1.value == "")
+		{
+			alert("用户名不能为空！");
+			return false;
+		}
+		if(tl1.value == "" || tl2.value.length < 6)
+		{
+			alert("密码不能少于6位");
+			return false;
+		}
+		if(tl1.value == "root" && tl2.value == "123456"){
+			alert("登录成功");
+			window.location.href = "Home.html";
+		}
+		else{
+			alert("用户名或者密码错误！");
+		}
+		// var user = tl1.value;
+		// var password = tl2.value;
+		// var url = "checkname.txt";
+		// xmlhttp.open("GET",url,true);
+		// if(xmlhttp.readyState == 4){
+		// 	var msg = xmlhttp.responseText;
+		// 	var userArr = msg.split("|");
+		// 	if(user != userArr[0]){
+		// 		alert('用户名不正确！');
+		// 	}
+		// 	else if (password !=userArr[1]){
+		// 		alert("密码不正确！");
+		// 	}
+		// 	else{
+		// 		alert("欢迎光临");
+		// 	}
+		// }
+		
+	}
+	
+</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PARZIN帕森官方旗舰店</title>
+<script src="jquery-3.1.1/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Other.css">
+</head>
+
+<body>
+<div class="par_top">
+     <ul class="par_level">
+        <li id="parzin"><a>PARZIN</a></li>
+        <li><a>本店商品</a>
+            <ul class="par_cd">
+                <li>时尚太阳镜</li>
+                <li>偏光驾驶镜</li>
+                <li>光学镜片</li>
+                <li>光学镜架</li>
+                <li>儿童眼镜</li>
+                <li>明星同款</li>
+                <li class="par_cd2">按价格分&nbsp&nbsp&nbsp></li>
+                	<ul class="par_price">
+                   	  <li>99以下</li>
+                   	  <li>100-399</li>
+                   	  <li>400-699</li>
+                   	  <li>700以上</li>
+                  </ul>     
+                <li class="par_cd3">按风格分&nbsp&nbsp&nbsp>
+                	<ul class="par_sty">
+                   	  <li>优雅时尚</li>
+                   	  <li>复古潮流</li>
+                   	  <li>休闲简约</li>
+                   	  <li>派对达人</li>
+                   </ul>
+                </li>
+                <li class="par_cd4">按框型分&nbsp&nbsp&nbsp>
+                	<ul class="par_boxtype">
+                   	  <li>圆形</li>
+                   	  <li>方形</li>
+                   	  <li>猫眼形</li>
+                   	  <li>椭圆形</li>
+                   </ul>
+
+                </li>
+            </ul>
+        </li>
+        <li><a>人气热卖</a></li>
+        <li><a>新品潮流</a></li>
+        <li><a>品牌文化</a></li>
+     </ul>
+     
+</div>
+<div class="par_adv1"><img src="pic/parzin1.jpg" width="1520" height="900" /></div>
+
+<div class="par_main">
+     <div class="par_main1">
+          <div class="par_font1"><a href="#" class="par_font3">NEW IN · 初秋新品</a></div>
+          <div class="par_font1"><a href="#" class="par_font3">MS · 女士系列</a></div>
+          <div class="par_font1"><a href="#" class="par_font3">MEN · 男士系列</a></div>
+          <div class="par_font2">想改变 想要型 大胆去尝试 ></div>
+     </div>
+     <div class="par_main2">
+     <div class="par_adv2">¥ 10/满100使用 &nbsp&nbsp&nbsp&nbsp&nbsp领取>> </div>
+     <div class="par_adv2">¥ 30/满200使用 &nbsp&nbsp&nbsp&nbsp&nbsp领取>> </div>
+     </div>
+</div>
+
+<div class="par_sk">
+<div class="par_tk1">&nbsp A&nbspJ &nbsp&nbsp&nbsp 宋祖儿同款 <a> THE STAR </a> </div>
+<div class="par_tk2">
+     <div class="par_adv3"><img src="pic/parzin2.JPG" width="330" height="467" /></div>
+     <div class="par_adv3"><img src="pic/parzin3.JPG" width="330" height="467" /></div>
+     <div class="par_adv3"><img src="pic/parzin4.JPG" width="330" height="467" /></div>
+</div>
+</div>
+
+<div class="par_adv1"><img src="pic/parzin5.JPG" width="1520" height="738" /></div>
+</body>
+
+<script>
+	window.onload = function(){
+		var par2 = document.querySelector(".par_cd2");
+		var price = document.querySelector(".par_price");
+		var par3 = document.querySelector(".par_cd3");
+		var sty = document.querySelector(".par_sty");
+		var par4 = document.querySelector(".par_cd4");
+		var bt = document.querySelector(".par_boxtype");
+		var pz = document.querySelector("#parzin");
+		function overfunc2(){
+			price.style.display = 'block';
+		}
+		function outfunc2(){
+			price.style.display = 'none';
+		}
+		function overfunc3(){
+			sty.style.display = 'block';
+		}
+		function outfunc3(){
+			sty.style.display = 'none';
+		}
+		function overfunc4(){
+			bt.style.display = 'block';
+		}
+		function outfunc4(){
+			bt.style.display = 'none';
+		}
+
+		par2.addEventListener('mouseover',overfunc2,false);
+		par2.addEventListener('mouseout',outfunc2,false);
+		price.addEventListener('mouseover',overfunc2,false);
+		price.addEventListener('mouseout',outfunc2,false);
+		
+		par3.addEventListener('mouseover',overfunc3,false);
+		par3.addEventListener('mouseout',outfunc3,false);
+		sty.addEventListener('mouseover',overfunc3,false);
+		sty.addEventListener('mouseout',outfunc3,false);
+		
+		par4.addEventListener('mouseover',overfunc4,false);
+		par4.addEventListener('mouseout',outfunc4,false);
+		bt.addEventListener('mouseover',overfunc4,false);
+		bt.addEventListener('mouseout',outfunc4,false);
+		
+		pz.onclick = function(){
+			document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;	
+		}
+
+	}
+</script>
+
+</html>
